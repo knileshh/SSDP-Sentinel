@@ -1,19 +1,32 @@
 ﻿package types
 
-import "net"
+import (
+    "net"
+    "time"
+)
 
-// PacketFeatures represents the 80 features for ML
+// PacketFeatures represents all 80 features from CIC-DDoS2019
 type PacketFeatures struct {
+    // Basic info
     SourceIP   net.IP
     DestIP     net.IP
     SourcePort uint16
     DestPort   uint16
     Protocol   uint8
+    Timestamp  time.Time
     
-    // Flow statistics
-    FlowDuration      uint64
-    TotalFwdPackets   uint32
-    TotalBwdPackets   uint32
+    // Flow features
+    FlowDuration        uint64
+    TotalFwdPackets     uint32
+    TotalBwdPackets     uint32
+    TotalLenFwdPackets  uint64
+    TotalLenBwdPackets  uint64
     
-    // TODO: Add remaining 72 features
+    // Packet length stats
+    FwdPacketLenMax  uint16
+    FwdPacketLenMin  uint16
+    FwdPacketLenMean float64
+    FwdPacketLenStd  float64
+    
+    // TODO: Add remaining features
 }
