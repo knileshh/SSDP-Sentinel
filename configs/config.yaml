@@ -1,0 +1,13 @@
+﻿# SSDP Sentinel Configuration
+
+network:
+  interface: "eth0"
+  ssdp_port: 1900
+
+ml:
+  model_path: "models/SSDP_flood_detection.pmml"
+  threshold_confidence: 0.85
+
+logging:
+  level: "info"
+  format: "json"
