@@ -1,8 +1,10 @@
 ﻿package ebpf
 
+//go:generate go run github.com/cilium/ebpf/cmd/bpf2go -type event xdp xdp_program.c -- -I.
+
 import (
-    "github.com/cilium/ebpf"
-    "github.com/sirupsen/logrus"
+	"github.com/cilium/ebpf"
+	"github.com/sirupsen/logrus"
 )
 
 // Loader manages eBPF program lifecycle

@@ -1,0 +1,25 @@
+# Test builds
+build/
+*.test
+*.out
+coverage.html
+coverage.out
+
+# eBPF generated files
+internal/ebpf/xdp_*.go
+internal/ebpf/xdp_*.o
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
