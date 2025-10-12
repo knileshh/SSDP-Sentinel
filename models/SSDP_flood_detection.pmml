@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_4" version="4.4.1">
+    <Header copyright="Copyright (c) 2021 Software AG" description="Default description">
+        <Application name="Nyoka" version="5.5.0"/>
+        <Timestamp>2025-10-30 08:51:10.462332</Timestamp>
+    </Header>
+    <DataDictionary numberOfFields="81">
+        <DataField name="Source Port" optype="continuous" dataType="double"/>
+        <DataField name="Destination Port" optype="continuous" dataType="double"/>
+        <DataField name="Protocol" optype="continuous" dataType="double"/>
+        <DataField name="Flow Duration" optype="continuous" dataType="double"/>
+        <DataField name="Total Fwd Packets" optype="continuous" dataType="double"/>
+        <DataField name="Total Backward Packets" optype="continuous" dataType="double"/>
+        <DataField name="Total Length of Fwd Packets" optype="continuous" dataType="double"/>
+        <DataField name="Total Length of Bwd Packets" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Packet Length Max" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Packet Length Min" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Packet Length Mean" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Packet Length Std" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Packet Length Max" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Packet Length Min" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Packet Length Mean" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Packet Length Std" optype="continuous" dataType="double"/>
+        <DataField name="Flow Bytes/s" optype="continuous" dataType="double"/>
+        <DataField name="Flow Packets/s" optype="continuous" dataType="double"/>
+        <DataField name="Flow IAT Mean" optype="continuous" dataType="double"/>
+        <DataField name="Flow IAT Std" optype="continuous" dataType="double"/>
+        <DataField name="Flow IAT Max" optype="continuous" dataType="double"/>
+        <DataField name="Flow IAT Min" optype="continuous" dataType="double"/>
+        <DataField name="Fwd IAT Total" optype="continuous" dataType="double"/>
+        <DataField name="Fwd IAT Mean" optype="continuous" dataType="double"/>
+        <DataField name="Fwd IAT Std" optype="continuous" dataType="double"/>
+        <DataField name="Fwd IAT Max" optype="continuous" dataType="double"/>
+        <DataField name="Fwd IAT Min" optype="continuous" dataType="double"/>
+        <DataField name="Bwd IAT Total" optype="continuous" dataType="double"/>
+        <DataField name="Bwd IAT Mean" optype="continuous" dataType="double"/>
+        <DataField name="Bwd IAT Std" optype="continuous" dataType="double"/>
+        <DataField name="Bwd IAT Max" optype="continuous" dataType="double"/>
+        <DataField name="Bwd IAT Min" optype="continuous" dataType="double"/>
+        <DataField name="Fwd PSH Flags" optype="continuous" dataType="double"/>
+        <DataField name="Bwd PSH Flags" optype="continuous" dataType="double"/>
+        <DataField name="Fwd URG Flags" optype="continuous" dataType="double"/>
+        <DataField name="Bwd URG Flags" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Header Length" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Header Length" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Packets/s" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Packets/s" optype="continuous" dataType="double"/>
+        <DataField name="Min Packet Length" optype="continuous" dataType="double"/>
+        <DataField name="Max Packet Length" optype="continuous" dataType="double"/>
+        <DataField name="Packet Length Mean" optype="continuous" dataType="double"/>
+        <DataField name="Packet Length Std" optype="continuous" dataType="double"/>
+        <DataField name="Packet Length Variance" optype="continuous" dataType="double"/>
+        <DataField name="FIN Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="SYN Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="RST Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="PSH Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="ACK Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="URG Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="CWE Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="ECE Flag Count" optype="continuous" dataType="double"/>
+        <DataField name="Down/Up Ratio" optype="continuous" dataType="double"/>
+        <DataField name="Average Packet Size" optype="continuous" dataType="double"/>
+        <DataField name="Avg Fwd Segment Size" optype="continuous" dataType="double"/>
+        <DataField name="Avg Bwd Segment Size" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Avg Bytes/Bulk" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Avg Packets/Bulk" optype="continuous" dataType="double"/>
+        <DataField name="Fwd Avg Bulk Rate" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Avg Bytes/Bulk" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Avg Packets/Bulk" optype="continuous" dataType="double"/>
+        <DataField name="Bwd Avg Bulk Rate" optype="continuous" dataType="double"/>
+        <DataField name="Subflow Fwd Packets" optype="continuous" dataType="double"/>
+        <DataField name="Subflow Fwd Bytes" optype="continuous" dataType="double"/>
+        <DataField name="Subflow Bwd Packets" optype="continuous" dataType="double"/>
+        <DataField name="Subflow Bwd Bytes" optype="continuous" dataType="double"/>
+        <DataField name="Init_Win_bytes_forward" optype="continuous" dataType="double"/>
+        <DataField name="Init_Win_bytes_backward" optype="continuous" dataType="double"/>
+        <DataField name="act_data_pkt_fwd" optype="continuous" dataType="double"/>
+        <DataField name="min_seg_size_forward" optype="continuous" dataType="double"/>
+        <DataField name="Active Mean" optype="continuous" dataType="double"/>
+        <DataField name="Active Std" optype="continuous" dataType="double"/>
+        <DataField name="Active Max" optype="continuous" dataType="double"/>
+        <DataField name="Active Min" optype="continuous" dataType="double"/>
+        <DataField name="Idle Mean" optype="continuous" dataType="double"/>
+        <DataField name="Idle Std" optype="continuous" dataType="double"/>
+        <DataField name="Idle Max" optype="continuous" dataType="double"/>
+        <DataField name="Idle Min" optype="continuous" dataType="double"/>
+        <DataField name="Inbound" optype="continuous" dataType="double"/>
+        <DataField name="malicious" optype="categorical" dataType="integer">
+            <Value value="0"/>
+            <Value value="1"/>
+        </DataField>
+    </DataDictionary>
+    <TreeModel modelName="DecisionTreeClassifier" functionName="classification" missingValuePenalty="1.0">
+        <MiningSchema>
+            <MiningField name="Source Port" usageType="active" optype="continuous"/>
+            <MiningField name="Destination Port" usageType="active" optype="continuous"/>
+            <MiningField name="Protocol" usageType="active" optype="continuous"/>
+            <MiningField name="Flow Duration" usageType="active" optype="continuous"/>
+            <MiningField name="Total Fwd Packets" usageType="active" optype="continuous"/>
+            <MiningField name="Total Backward Packets" usageType="active" optype="continuous"/>
+            <MiningField name="Total Length of Fwd Packets" usageType="active" optype="continuous"/>
+            <MiningField name="Total Length of Bwd Packets" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Packet Length Max" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Packet Length Min" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Packet Length Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Packet Length Std" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Packet Length Max" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Packet Length Min" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Packet Length Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Packet Length Std" usageType="active" optype="continuous"/>
+            <MiningField name="Flow Bytes/s" usageType="active" optype="continuous"/>
+            <MiningField name="Flow Packets/s" usageType="active" optype="continuous"/>
+            <MiningField name="Flow IAT Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Flow IAT Std" usageType="active" optype="continuous"/>
+            <MiningField name="Flow IAT Max" usageType="active" optype="continuous"/>
+            <MiningField name="Flow IAT Min" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd IAT Total" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd IAT Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd IAT Std" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd IAT Max" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd IAT Min" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd IAT Total" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd IAT Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd IAT Std" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd IAT Max" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd IAT Min" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd PSH Flags" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd PSH Flags" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd URG Flags" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd URG Flags" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Header Length" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Header Length" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Packets/s" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Packets/s" usageType="active" optype="continuous"/>
+            <MiningField name="Min Packet Length" usageType="active" optype="continuous"/>
+            <MiningField name="Max Packet Length" usageType="active" optype="continuous"/>
+            <MiningField name="Packet Length Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Packet Length Std" usageType="active" optype="continuous"/>
+            <MiningField name="Packet Length Variance" usageType="active" optype="continuous"/>
+            <MiningField name="FIN Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="SYN Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="RST Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="PSH Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="ACK Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="URG Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="CWE Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="ECE Flag Count" usageType="active" optype="continuous"/>
+            <MiningField name="Down/Up Ratio" usageType="active" optype="continuous"/>
+            <MiningField name="Average Packet Size" usageType="active" optype="continuous"/>
+            <MiningField name="Avg Fwd Segment Size" usageType="active" optype="continuous"/>
+            <MiningField name="Avg Bwd Segment Size" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Avg Bytes/Bulk" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Avg Packets/Bulk" usageType="active" optype="continuous"/>
+            <MiningField name="Fwd Avg Bulk Rate" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Avg Bytes/Bulk" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Avg Packets/Bulk" usageType="active" optype="continuous"/>
+            <MiningField name="Bwd Avg Bulk Rate" usageType="active" optype="continuous"/>
+            <MiningField name="Subflow Fwd Packets" usageType="active" optype="continuous"/>
+            <MiningField name="Subflow Fwd Bytes" usageType="active" optype="continuous"/>
+            <MiningField name="Subflow Bwd Packets" usageType="active" optype="continuous"/>
+            <MiningField name="Subflow Bwd Bytes" usageType="active" optype="continuous"/>
+            <MiningField name="Init_Win_bytes_forward" usageType="active" optype="continuous"/>
+            <MiningField name="Init_Win_bytes_backward" usageType="active" optype="continuous"/>
+            <MiningField name="act_data_pkt_fwd" usageType="active" optype="continuous"/>
+            <MiningField name="min_seg_size_forward" usageType="active" optype="continuous"/>
+            <MiningField name="Active Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Active Std" usageType="active" optype="continuous"/>
+            <MiningField name="Active Max" usageType="active" optype="continuous"/>
+            <MiningField name="Active Min" usageType="active" optype="continuous"/>
+            <MiningField name="Idle Mean" usageType="active" optype="continuous"/>
+            <MiningField name="Idle Std" usageType="active" optype="continuous"/>
+            <MiningField name="Idle Max" usageType="active" optype="continuous"/>
+            <MiningField name="Idle Min" usageType="active" optype="continuous"/>
+            <MiningField name="Inbound" usageType="active" optype="continuous"/>
+            <MiningField name="malicious" usageType="target" optype="categorical"/>
+        </MiningSchema>
+        <Output>
+            <OutputField name="probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+            <OutputField name="probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+            <OutputField name="predicted_malicious" optype="categorical" dataType="integer" feature="predictedValue"/>
+        </Output>
+        <Node id="0" recordCount="1798526.0">
+            <True/>
+            <Node id="1" recordCount="939.0">
+                <SimplePredicate field="Fwd Packet Length Min" operator="lessOrEqual" value="49.5"/>
+                <Node id="2" recordCount="518.0">
+                    <SimplePredicate field="min_seg_size_forward" operator="lessOrEqual" value="22.0"/>
+                    <Node id="3" recordCount="370.0">
+                        <SimplePredicate field="Inbound" operator="lessOrEqual" value="0.5"/>
+                        <Node id="4" score="0" recordCount="362.0">
+                            <SimplePredicate field="Destination Port" operator="lessOrEqual" value="5779.0"/>
+                            <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                            <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                        </Node>
+                        <Node id="5" score="1" recordCount="8.0">
+                            <SimplePredicate field="Destination Port" operator="greaterThan" value="5779.0"/>
+                            <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                            <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                        </Node>
+                    </Node>
+                    <Node id="6" recordCount="148.0">
+                        <SimplePredicate field="Inbound" operator="greaterThan" value="0.5"/>
+                        <Node id="7" recordCount="70.0">
+                            <SimplePredicate field="URG Flag Count" operator="lessOrEqual" value="0.5"/>
+                            <Node id="8" recordCount="69.0">
+                                <SimplePredicate field="SYN Flag Count" operator="lessOrEqual" value="0.5"/>
+                                <Node id="9" recordCount="10.0">
+                                    <SimplePredicate field="Fwd IAT Min" operator="lessOrEqual" value="0.5"/>
+                                    <Node id="10" score="0" recordCount="1.0">
+                                        <SimplePredicate field="Fwd IAT Max" operator="lessOrEqual" value="886342.0"/>
+                                        <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                        <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                                    </Node>
+                                    <Node id="11" score="1" recordCount="9.0">
+                                        <SimplePredicate field="Fwd IAT Max" operator="greaterThan" value="886342.0"/>
+                                        <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                        <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                    </Node>
+                                </Node>
+                                <Node id="12" score="1" recordCount="59.0">
+                                    <SimplePredicate field="Fwd IAT Min" operator="greaterThan" value="0.5"/>
+                                    <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                    <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                </Node>
+                            </Node>
+                            <Node id="13" score="0" recordCount="1.0">
+                                <SimplePredicate field="SYN Flag Count" operator="greaterThan" value="0.5"/>
+                                <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                            </Node>
+                        </Node>
+                        <Node id="14" recordCount="78.0">
+                            <SimplePredicate field="URG Flag Count" operator="greaterThan" value="0.5"/>
+                            <Node id="15" score="1" recordCount="5.0">
+                                <SimplePredicate field="Destination Port" operator="lessOrEqual" value="25988.0"/>
+                                <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                            </Node>
+                            <Node id="16" score="0" recordCount="73.0">
+                                <SimplePredicate field="Destination Port" operator="greaterThan" value="25988.0"/>
+                                <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                            </Node>
+                        </Node>
+                    </Node>
+                </Node>
+                <Node id="17" recordCount="421.0">
+                    <SimplePredicate field="min_seg_size_forward" operator="greaterThan" value="22.0"/>
+                    <Node id="18" recordCount="380.0">
+                        <SimplePredicate field="Bwd Packet Length Min" operator="lessOrEqual" value="23.5"/>
+                        <Node id="19" recordCount="31.0">
+                            <SimplePredicate field="Fwd Packets/s" operator="lessOrEqual" value="0.6662351"/>
+                            <Node id="20" recordCount="22.0">
+                                <SimplePredicate field="Init_Win_bytes_forward" operator="lessOrEqual" value="64887.5"/>
+                                <Node id="21" score="0" recordCount="21.0">
+                                    <SimplePredicate field="Active Std" operator="lessOrEqual" value="2723630.8"/>
+                                    <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                    <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                                </Node>
+                                <Node id="22" score="1" recordCount="1.0">
+                                    <SimplePredicate field="Active Std" operator="greaterThan" value="2723630.8"/>
+                                    <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                    <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                </Node>
+                            </Node>
+                            <Node id="23" score="1" recordCount="9.0">
+                                <SimplePredicate field="Init_Win_bytes_forward" operator="greaterThan" value="64887.5"/>
+                                <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                            </Node>
+                        </Node>
+                        <Node id="24" recordCount="349.0">
+                            <SimplePredicate field="Fwd Packets/s" operator="greaterThan" value="0.6662351"/>
+                            <Node id="25" recordCount="348.0">
+                                <SimplePredicate field="Bwd Packet Length Std" operator="lessOrEqual" value="721.2759"/>
+                                <Node id="26" recordCount="347.0">
+                                    <SimplePredicate field="Down/Up Ratio" operator="lessOrEqual" value="3.5"/>
+                                    <Node id="27" recordCount="341.0">
+                                        <SimplePredicate field="Fwd PSH Flags" operator="lessOrEqual" value="0.5"/>
+                                        <Node id="28" recordCount="339.0">
+                                            <SimplePredicate field="Flow IAT Mean" operator="lessOrEqual" value="906485.4"/>
+                                            <Node id="29" recordCount="92.0">
+                                                <SimplePredicate field="Source Port" operator="lessOrEqual" value="509.0"/>
+                                                <Node id="30" score="1" recordCount="88.0">
+                                                    <SimplePredicate field="Init_Win_bytes_forward" operator="lessOrEqual" value="248.0"/>
+                                                    <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                                    <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                                </Node>
+                                                <Node id="31" score="0" recordCount="4.0">
+                                                    <SimplePredicate field="Init_Win_bytes_forward" operator="greaterThan" value="248.0"/>
+                                                    <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                                    <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                                                </Node>
+                                            </Node>
+                                            <Node id="32" score="1" recordCount="247.0">
+                                                <SimplePredicate field="Source Port" operator="greaterThan" value="509.0"/>
+                                                <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                                <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                            </Node>
+                                        </Node>
+                                        <Node id="33" recordCount="2.0">
+                                            <SimplePredicate field="Flow IAT Mean" operator="greaterThan" value="906485.4"/>
+                                            <Node id="34" score="0" recordCount="1.0">
+                                                <SimplePredicate field="Bwd IAT Mean" operator="lessOrEqual" value="1.5"/>
+                                                <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                                <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                                            </Node>
+                                            <Node id="35" score="1" recordCount="1.0">
+                                                <SimplePredicate field="Bwd IAT Mean" operator="greaterThan" value="1.5"/>
+                                                <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                                <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                            </Node>
+                                        </Node>
+                                    </Node>
+                                    <Node id="36" recordCount="6.0">
+                                        <SimplePredicate field="Fwd PSH Flags" operator="greaterThan" value="0.5"/>
+                                        <Node id="37" score="0" recordCount="2.0">
+                                            <SimplePredicate field="Avg Fwd Segment Size" operator="lessOrEqual" value="49.089287"/>
+                                            <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                            <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                                        </Node>
+                                        <Node id="38" score="1" recordCount="4.0">
+                                            <SimplePredicate field="Avg Fwd Segment Size" operator="greaterThan" value="49.089287"/>
+                                            <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                            <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                                        </Node>
+                                    </Node>
+                                </Node>
+                                <Node id="39" score="0" recordCount="1.0">
+                                    <SimplePredicate field="Down/Up Ratio" operator="greaterThan" value="3.5"/>
+                                    <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                    <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                                </Node>
+                            </Node>
+                            <Node id="40" score="0" recordCount="1.0">
+                                <SimplePredicate field="Bwd Packet Length Std" operator="greaterThan" value="721.2759"/>
+                                <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                            </Node>
+                        </Node>
+                    </Node>
+                    <Node id="41" score="0" recordCount="41.0">
+                        <SimplePredicate field="Bwd Packet Length Min" operator="greaterThan" value="23.5"/>
+                        <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                        <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                    </Node>
+                </Node>
+            </Node>
+            <Node id="42" recordCount="1797587.0">
+                <SimplePredicate field="Fwd Packet Length Min" operator="greaterThan" value="49.5"/>
+                <Node id="43" recordCount="1797574.0">
+                    <SimplePredicate field="Subflow Bwd Bytes" operator="lessOrEqual" value="118.0"/>
+                    <Node id="44" recordCount="7.0">
+                        <SimplePredicate field="Source Port" operator="lessOrEqual" value="325.0"/>
+                        <Node id="45" score="1" recordCount="1.0">
+                            <SimplePredicate field="Fwd Packet Length Max" operator="lessOrEqual" value="134.5"/>
+                            <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                            <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                        </Node>
+                        <Node id="46" score="0" recordCount="6.0">
+                            <SimplePredicate field="Fwd Packet Length Max" operator="greaterThan" value="134.5"/>
+                            <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                            <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                        </Node>
+                    </Node>
+                    <Node id="47" recordCount="1797567.0">
+                        <SimplePredicate field="Source Port" operator="greaterThan" value="325.0"/>
+                        <Node id="48" recordCount="94.0">
+                            <SimplePredicate field="Total Length of Fwd Packets" operator="lessOrEqual" value="406.0"/>
+                            <Node id="49" score="1" recordCount="93.0">
+                                <SimplePredicate field="Fwd Packet Length Mean" operator="lessOrEqual" value="111.0"/>
+                                <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                                <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                            </Node>
+                            <Node id="50" score="0" recordCount="1.0">
+                                <SimplePredicate field="Fwd Packet Length Mean" operator="greaterThan" value="111.0"/>
+                                <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                                <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                            </Node>
+                        </Node>
+                        <Node id="51" score="1" recordCount="1797473.0">
+                            <SimplePredicate field="Total Length of Fwd Packets" operator="greaterThan" value="406.0"/>
+                            <ScoreDistribution value="0" recordCount="0.0" confidence="0.0"/>
+                            <ScoreDistribution value="1" recordCount="1.0" confidence="1.0"/>
+                        </Node>
+                    </Node>
+                </Node>
+                <Node id="52" score="0" recordCount="13.0">
+                    <SimplePredicate field="Subflow Bwd Bytes" operator="greaterThan" value="118.0"/>
+                    <ScoreDistribution value="0" recordCount="1.0" confidence="1.0"/>
+                    <ScoreDistribution value="1" recordCount="0.0" confidence="0.0"/>
+                </Node>
+            </Node>
+        </Node>
+    </TreeModel>
+</PMML>
