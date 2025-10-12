@@ -95,8 +95,20 @@ fi
 echo ""
 echo "Installing Go dependencies..."
 cd "$(dirname "$0")/.."
-go mod download
-echo "✓ Go dependencies installed"
+
+# Verify go.mod syntax
+if ! go mod verify &> /dev/null; then
+    echo "⚠️  Running go mod tidy to fix dependencies..."
+    go mod tidy
+fi
+
+if go mod download; then
+    echo "✓ Go dependencies installed"
+else
+    echo "❌ Failed to download Go dependencies"
+    echo "   Try running: go mod tidy"
+    exit 1
+fi
 
 # Install bpf2go tool
 echo ""
